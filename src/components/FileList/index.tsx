@@ -20,6 +20,7 @@ const FileList: React.FC<FileListProps> = ({ files }: FileListProps) => {
                         <div>
                             <strong>{uploadedFile.name}</strong>
                             <span>{uploadedFile.readableSize}</span>
+                            <span style={{ right: 0 }}>Delete</span>
                         </div>
                     </FileInfo>
                 </li>

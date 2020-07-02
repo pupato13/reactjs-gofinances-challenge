@@ -47,8 +47,6 @@ const Dashboard: React.FC = () => {
                 }),
             );
 
-            console.log(formattedTransactions);
-
             const formattedBalance = {
                 income: formatValue(response.data.balance.income),
                 outcome: formatValue(response.data.balance.outcome),
@@ -69,7 +67,8 @@ const Dashboard: React.FC = () => {
                 <CardContainer>
                     <Card>
                         <header>
-                            <p>Entradas</p>
+                            {/* <p>Entradas</p> */}
+                            <p>Income</p>
                             <img src={income} alt="Income" />
                         </header>
                         {/* <h1 data-testid="balance-income">R$ 5.000,00</h1> */}
@@ -77,7 +76,8 @@ const Dashboard: React.FC = () => {
                     </Card>
                     <Card>
                         <header>
-                            <p>Saídas</p>
+                            {/* <p>Saídas</p> */}
+                            <p>Outcome</p>
                             <img src={outcome} alt="Outcome" />
                         </header>
                         <h1 data-testid="balance-outcome">{balance.outcome}</h1>
@@ -95,16 +95,20 @@ const Dashboard: React.FC = () => {
                     <table>
                         <thead>
                             <tr>
-                                <th>Título</th>
-                                <th>Preço</th>
-                                <th>Categoria</th>
-                                <th>Data</th>
+                                {/* <th>Título</th> */}
+                                {/* <th>Preço</th> */}
+                                {/* <th>Categoria</th> */}
+                                {/* <th>Data</th> */}
+                                <th>Title</th>
+                                <th>Price</th>
+                                <th>Category</th>
+                                <th>Date</th>
                             </tr>
                         </thead>
 
                         <tbody>
                             {transactions.map(transaction => (
-                                <tr>
+                                <tr key={transaction.id}>
                                     <td className="title">
                                         {transaction.title}
                                     </td>
