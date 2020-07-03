@@ -1,7 +1,7 @@
 {
     "editor.renderLineHighlight": "gutter",
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Dracula",
+    "workbench.colorTheme": "Omni",
     "editor.lineHeight": 24,
     "editor.fontLigatures": true,
     "editor.rulers": [80, 120]
